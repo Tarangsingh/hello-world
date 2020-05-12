@@ -1,3 +1,4 @@
-# hello-world
-first repository
-SO i tend to use github to store details about may leetcode challenge.
+# Coding problems
+| S.No | Problem Link | Algorithm used | Data Structure used | Time Complexity | Space Complexity |
+|------|--------------|----------------|---------------------|-----------------|------------------|
+| 1    | https://www.hackerrank.com/challenges/find-the-median/problem | Counting sort | HahMap | O(n) | O(n) |
