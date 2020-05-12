@@ -1,0 +1,25 @@
+int findMedian(vector<int> arr) 
+{
+    int sz=arr.size(),xx=sz/2,f,ct=0;
+    map<int,int> mp;
+    map<int,int>:: iterator itr;
+    for(int i=0;i<sz;i++)
+    {
+        mp[arr[i]]++;
+    }
+    for(itr=mp.begin();itr!=mp.end();itr++)
+    {
+        if(ct<xx)
+        {
+            f=itr->first;
+            ct=ct+itr->second;
+        }
+        else if(ct==xx)
+        {
+            return itr->first;
+        }
+        else if(ct>xx)
+            return f;
+    }
+    return 0;
+}
