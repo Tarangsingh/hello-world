@@ -1,0 +1,26 @@
+bool pal(string s,int i,int j)
+{
+    for(;i<j;i++,j--)
+    {
+        if(s[i]!=s[j])
+            return false;
+    }
+    return true;
+}
+int palindromeIndex(string s) 
+{
+    int sz=s.size();
+    for(int i=0,j=sz-1;i<j;i++,j--)
+    {
+        if(s[i]!=s[j])
+        {
+            if(pal(s,i+1,j))
+                return i;
+            else if(pal(s,i,j-1))
+                return j;
+            else
+                return -1;
+        }
+    }
+    return -1;
+}
